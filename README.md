@@ -1,8 +1,6 @@
 # Multithreaded Web Crawler (C++)
 
-This project is a multithreaded web crawler implemented in C++ using POSIX threads
-and libcurl. It demonstrates core Operating System concepts such as multithreading,
-synchronization, and the producer–consumer problem.
+This project is a multithreaded web crawler implemented in C++ using POSIX threads and libcurl. It demonstrates core Operating System concepts such as multithreading, synchronization, and the producer–consumer problem.
 
 ---
 
@@ -17,7 +15,6 @@ synchronization, and the producer–consumer problem.
 - Logging and crawler statistics
 
 ---
----
 
 ## 📸 Screenshots
 
@@ -30,6 +27,8 @@ synchronization, and the producer–consumer problem.
 ### Project Directory Structure
 ![Project Structure](screenshots/folder.png)
 
+---
+
 ## Technologies Used
 - C++ (C++11)
 - POSIX Threads (pthreads)
@@ -40,41 +39,53 @@ synchronization, and the producer–consumer problem.
 
 ## How to Run
 
-
-1. Open Project Directory
+### 1. Open Project Directory
 Navigate to the project folder:
 ```bash
 cd ~/webcrawler
 ```
-```bash
+
 Verify files using:
+```bash
 ls
 ```
-3. Compile the Project
+
+### 2. Compile the Project
 Compile using g++ with pthreads and libcurl:
-g++ crawler.cpp url_queue.cpp parser.cpp stats.cpp logger.cpp saver.cpp -o crawler-lpthread -lcurl
+```bash
+g++ crawler.cpp url_queue.cpp parser.cpp stats.cpp logger.cpp saver.cpp -o crawler -lpthread -lcurl
+```
 
-4. Run the Crawler
+### 3. Run the Crawler
 Run the crawler with a seed URL:
-./crawler https://books.toscrape.com
+```bash
+./crawler [https://books.toscrape.com](https://books.toscrape.com)
+```
 
-5. Check Downloaded Pages
+### 4. Check Downloaded Pages
 Downloaded pages are stored in the pages directory:
+```bash
 ls pages/
+```
+
+To view a specific page:
+```bash
 cat pages/page_1.html
+```
 
-6. View Log File
+### 5. View Log File
 Check crawler activity log:
+```bash
 cat crawler.log
+```
 
-7. Stop the Crawler
-The crawler stops automatically after reaching limits.
-To stop manually, press Ctrl + C
+### 6. Stop the Crawler
+The crawler stops automatically after reaching limits. To stop manually, press **Ctrl + C**.
 
-Recommended URLs
-https://books.toscrape.com
-http://quotes.toscrape.com
+---
 
-Important Note
-Modern websites like Google or ChatGPT use JavaScript and cannot be fully crawled by this static
-HTML crawler
+### Recommended URLs
+- https://books.toscrape.com
+- http://quotes.toscrape.com
+
+> **Important Note:** Modern websites like Google or ChatGPT use JavaScript and cannot be fully crawled by this static HTML crawler.
