@@ -41,5 +41,37 @@ synchronization, and the producer–consumer problem.
 ## How to Run
 
 ```bash
-g++ crawler.cpp url_queue.cpp parser.cpp stats.cpp logger.cpp saver.cpp -o crawler -lpthread -lcurl
+1. Open Project Directory
+Navigate to the project folder:
+cd ~/webcrawler
+Verify files using:
+ls
+
+2. Compile the Project
+Compile using g++ with pthreads and libcurl:
+g++ crawler.cpp url_queue.cpp parser.cpp stats.cpp logger.cpp saver.cpp -o crawler-lpthread -lcurl
+
+3. Run the Crawler
+Run the crawler with a seed URL:
 ./crawler https://books.toscrape.com
+
+4. Check Downloaded Pages
+Downloaded pages are stored in the pages directory:
+ls pages/
+cat pages/page_1.html
+
+5. View Log File
+Check crawler activity log:
+cat crawler.log
+
+6. Stop the Crawler
+The crawler stops automatically after reaching limits.
+To stop manually, press Ctrl + C
+
+Recommended URLs
+https://books.toscrape.com
+http://quotes.toscrape.com
+
+Important Note
+Modern websites like Google or ChatGPT use JavaScript and cannot be fully crawled by this static
+HTML crawler
