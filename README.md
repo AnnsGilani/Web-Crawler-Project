@@ -40,31 +40,34 @@ synchronization, and the producer–consumer problem.
 
 ## How to Run
 
-```bash
+
 1. Open Project Directory
 Navigate to the project folder:
+```bash
 cd ~/webcrawler
+```
+```bash
 Verify files using:
 ls
-
-2. Compile the Project
+```
+3. Compile the Project
 Compile using g++ with pthreads and libcurl:
 g++ crawler.cpp url_queue.cpp parser.cpp stats.cpp logger.cpp saver.cpp -o crawler-lpthread -lcurl
 
-3. Run the Crawler
+4. Run the Crawler
 Run the crawler with a seed URL:
 ./crawler https://books.toscrape.com
 
-4. Check Downloaded Pages
+5. Check Downloaded Pages
 Downloaded pages are stored in the pages directory:
 ls pages/
 cat pages/page_1.html
 
-5. View Log File
+6. View Log File
 Check crawler activity log:
 cat crawler.log
 
-6. Stop the Crawler
+7. Stop the Crawler
 The crawler stops automatically after reaching limits.
 To stop manually, press Ctrl + C
 
