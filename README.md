@@ -17,6 +17,18 @@ synchronization, and the producer–consumer problem.
 - Logging and crawler statistics
 
 ---
+---
+
+## 📸 Screenshots
+
+### Running the Web Crawler
+![Crawler Running](screenshots/run.png)
+
+### Download Output
+![Crawler Output](screenshots/output.png)
+
+### Project Directory Structure
+![Project Structure](screenshots/folder.png)
 
 ## Technologies Used
 - C++ (C++11)
